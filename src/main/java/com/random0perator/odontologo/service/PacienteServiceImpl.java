@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PacienteServiceImpl implements PacienteService {
@@ -24,15 +25,9 @@ public class PacienteServiceImpl implements PacienteService {
     }
 
     @Override
-    public Paciente buscarPacienteXid(Integer id) {
-        return pacienteRepository.getPacienteById(id);
+    public Optional<Paciente> buscarPacienteXid(Integer id) {
+        return pacienteRepository.findById(id);
     }
-
-    @Override
-    public Paciente buscarPacienteXemail(String email) {
-        return pacienteRepository.getPacienteByEmail(email);
-    }
-
 
     @Override
     public List<Paciente> buscarTodosLosPacientes() {
