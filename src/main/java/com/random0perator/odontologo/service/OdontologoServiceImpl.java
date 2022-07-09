@@ -8,8 +8,33 @@ import java.util.List;
 
 @Service
 public class  OdontologoServiceImpl implements OdontologoService{
+
+
+    @Override
+    public Odontologo buscarOdontologo(Integer id) {
+        List<Odontologo> odontologos = listaOdontologos();
+        return odontologos.get(id);
+
+
+    }
+
+    @Override
+    public Odontologo modificarOdontologo(Integer id) {
+        return null;
+    }
+
+    @Override
+    public Odontologo eliminarOdontologo(Integer id) {
+        return null;
+    }
+
     @Override
     public List<Odontologo> listaOdontologos() {
-        return Arrays.asList(new Odontologo("Cristian"), new Odontologo("David"));
+        return null;
+    }
+
+    @Override
+    public Odontologo crearOdontologo() {
+        return null;
     }
 }

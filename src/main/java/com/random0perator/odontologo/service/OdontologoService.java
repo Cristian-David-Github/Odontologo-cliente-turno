@@ -8,4 +8,9 @@ public interface OdontologoService {
 
     List<Odontologo> listaOdontologos();
 
+    Odontologo crearOdontologo();
+    Odontologo buscarOdontologo(Integer id);
+    Odontologo modificarOdontologo(Integer id);
+    Odontologo eliminarOdontologo(Integer id);
+
 }
