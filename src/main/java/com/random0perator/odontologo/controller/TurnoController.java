@@ -33,7 +33,7 @@ public class TurnoController {
 
         return response;
     }
-    @GetMapping("/all_scheduled_appointments")
+    @GetMapping("/all")
     public ResponseEntity<List<Turno>> listar() {
         return ResponseEntity.ok(turnoService.listarTodosLosTurnos());
     }
